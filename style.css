@@ -433,11 +433,12 @@ span {
   display: flex;
   flex-direction: row;
   padding-inline: 4px;
+  height: 40px;
   gap: 4px;
 }
 
 .lang img{
-  object-fit: cover;
+  height: 100%;
 }
 
 .git-project .description {
