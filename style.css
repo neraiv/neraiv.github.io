@@ -871,3 +871,44 @@ span {
     margin-top: 2rem;
   }
 }
+
+/* Additional */
+.skill-container {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  background: #f8f9fa;
+}
+.skill-container h4 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #495057;
+  border-bottom: 2px solid #007bff;
+  display: inline-block;
+}
+.skill-list {
+  display: flex; /* Flexbox for horizontal skills */
+  flex-wrap: wrap; /* Allow skills to wrap to the next line */
+  gap: 10px; /* Spacing between skill tags */
+  margin-top: 10px;
+}
+
+.skill-tag {
+  background: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.company {
+  font-style: italic; /* Italic company names */
+  color: #777; /* Lighter gray company name */
+}
+
+.duration {
+  font-size: 0.9em;
+  color: #777;
+  margin-left: 10px;
+}
