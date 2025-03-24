@@ -145,9 +145,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     const typed = new Typed('.typed-text', {
-        strings: [ 'Coder','Tech Enthusiast'],
+        strings: [ 'Mechatronics Engineer','Tech Enthusiast'],
         typeSpeed: 200,
-        backDelay: 200,
+        backDelay: 500,
         loop: true
     });
 });
