@@ -912,3 +912,165 @@ span {
   color: #777;
   margin-left: 10px;
 }
+
+/* Every Project */
+
+/* Filters styling */
+.filters {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-tag-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 1rem 1rem;
+  border-radius: 20px;
+  background: #2a2d2f;
+  border: 1px solid #dee2e6;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-tag-container[data-active="true"] {
+  background: #2a2d2f;
+  border-color: #2a2d2f;
+  color: white;
+}
+
+.filter-tag-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-tag-container span{
+  pointer-events: none;
+  user-select: none;
+}
+
+
+.filter-tag-container[data-tag="erkba"], .filter-tag-container[data-tag="pirelli"], .filter-tag-container[data-tag="nokta"]{
+  background: rgb(175, 49, 49);
+}
+
+.status-box {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+}
+
+.filter-tag-container[data-active="true"] .status-box {
+  background: #4CAF50;
+  color: white;
+}
+
+/* Cards styling */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.card {
+  border: 1px solid #dee2e6;
+  border-radius: 12px;
+  padding: 1.5rem;
+  background: #2a2d2f;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.tags {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  background: #f8f9fa;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85em;
+  color: #2a2d2f;
+  border: 1px solid #dee2e6;
+}
+
+.hidden {
+  display: none;
+}
+
+h3 {
+  margin: 0 0 1rem 0;
+}
+
+p {
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+#filters-search-bar {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid #dee2e6;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #2a2d2f;
+  box-shadow: 0 0 0 3px rgba(42, 45, 47, 0.1);
+}
+
+.search-reset-btn {
+  background-color: #4CAF50;
+  color: white;
+  display: flex;
+  border: 1px solid #dee2e6;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.search-reset-btn.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.search-reset-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+.search-reset-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
