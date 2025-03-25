@@ -664,11 +664,11 @@
                 </p>
             </div>
             <div class="card" data-tags="software embeded c++ uni-3th">
-                <h3>Electronic Compass for Sensor Fusion</h3>
+                <h3>Electronic Compass</h3>
                 <div class="tags"></div>
                 <p>
                     Integrated an electronic compass to verify vehicle orientation, processing roll, pitch, yaw, and acceleration data. Used an FIR filter 
-                    (discovered later) to reduce noise and implemented a system to validate turning accuracy before sending data to the battery.
+                    (discovered later) to reduce noise and implemented a system to validate turning status.
                 </p>
             </div>
             <div class="card" data-tags="software embeded c++ uni-3th">
@@ -679,7 +679,7 @@
                 </p>
             </div>
             <div class="card" data-tags="software embeded c++ python uni-3th">
-                <h3>NVIDIA Xavier AI PC</h3>
+                <h3>NVIDIA Xavier as Autopilot Brain</h3>
                 <div class="tags"></div>
                 <p>
                     Replaced the onboard laptop with an NVIDIA Jetson AGX Xavier for AI processing which significantly imporved our inference times (and safety of our personal laptops :)). 
@@ -691,16 +691,15 @@
                 <h3>Lane Tracking Algorithm</h3>
                 <div class="tags"></div>
                 <p>
-                    Developed a lane tracking algorithm using grayscale for white lines and HSV for yellow lines. Processed images with masking, cropping, Canny edge detection, 
-                    and Hough transform to detect lane markings. Calculated slope differences and intersection points to determine steering angle and turning speed fusing with 
-                    lidar data.
+                    Developed a lane tracking algorithm using hough trasnform. Filtered images with many techniuqes like masking, cropping, Canny edge detection, 
+                    Calculated slope differences and intersection points to determine steering angle and turning speed fusing.
                 </p>
             </div>
             <div class="card" data-tags="software flutter firebase dart uni-4th">
                 <h3>My First Flutter App Flutter joystick</h3>
                 <div class="tags"></div>
                 <p>
-                    Developed a mobile control interface as a side project for our final year. Implemented a joystick and used Firebase for real-time vehicle control and track vehicle
+                    Developed a mobile control interface as a side project. Implemented a joystick and used Firebase for real-time vehicle control and track vehicle
                     status.
                 </p>
             </div>
@@ -708,8 +707,8 @@
                 <h3>ESP Wifi Handler</h3>
                 <div class="tags"></div>
                 <p>
-                    Added an ESP32 module for internet connectivity in the vehicle's Flutter-based control system. Developed a library to store multiple networks and 
-                    automatically connect to the strongest signal, enabling seamless remote control during competitions. Published the code on GitHub.
+                    Developed a library to store multiple networks and automatically connect to the strongest signal, enabling seamless remote control for moving robots.
+                    Published the code on GitHub.
                 </p>
             </div>
             <div class="card" data-tags="software image-processing uni-4th pirelli">
@@ -721,7 +720,7 @@
                 </p>
             </div>
             <div class="card" data-tags="software esp wifi uni-4th pirelli">
-                <h3>ESP32 Network in Factory</h3>
+                <h3>Local ESP32's Network</h3>
                 <div class="tags"></div>
                 <p>
                     Designed a low-cost network system using ESP modules to streamline calibration processes. Developed three codes: Server for data transmission, 
@@ -729,7 +728,7 @@
                 </p>
             </div>
             <div class="card" data-tags="software stm-32 control can-bus uni-4th">
-                <h3>Local ESP32 Network in Factory</h3>
+                <h3>MyActuator Library</h3>
                 <div class="tags"></div>
                 <p>
                     Developed an STM32 library for controlling MyActuator motors via CanBus. Enabled full motor data retrieval and 
@@ -748,24 +747,24 @@
                 <h3>Medical Robot Control App</h3>
                 <div class="tags"></div>
                 <p>
-                    Developed Android app for a medical robot that collects patient training data and transmits it via Bluetooth and 
-                    stm32 software for communication with the app.
+                    Developed Android app for a medical robot that collects patient training data and transmits it via Bluetooth to an 
+                    stm32 software for communication with the app and vice-versa.
                 </p>
             </div>
             <div class="card" data-tags="software ros python c++ simulation erkba">
-                <h3>Medical Robot Control App</h3>
+                <h3>Medical Robot In Gazebo</h3>
                 <div class="tags"></div>
                 <p>
                     Redesigned a prototype robot's control system using a Unified Robot Description File and configured its controllers. 
-                    Developed a demo program in MoveIt2 for forward and inverse kinematics testing.
+                    Developed a demo program in MoveIt2 for forward and inverse kinematics analysis tests.
                 </p>
             </div>
             <div class="card" data-tags="embeded board-design ki-cad arduino erkba">
                 <h3>Hand Controller Circuit</h3>
                 <div class="tags"></div>
                 <p>
-                    Helped design of a hand controler circuit. Whic uses nrf to comminucate with other circuits and a bluetooth module to 
-                    comminucate with PC.
+                    Helped design of a hand controler circuit. Which uses nRf to comminucate with other circuits and a bluetooth module to 
+                    comminucate with PC using atmega328p as microprocessor.
                 </p>
             </div>
             <div class="card" data-tags="software python open-cv hobby">
@@ -789,21 +788,22 @@
                 <h3>Graphical LCD In Qt</h3>
                 <div class="tags"></div>
                 <p>
-                    Developed a graphical LCD in Qt to test our software.
+                    Developed a graphical LCD in Qt to test our software and make it testable by our testers.
                 </p>
             </div>
             <div class="card" data-tags="software simulation nokta">
-                <h3>Magnetic Analysis Using Finite Methods (FEMM)</h3>
+                <h3>Magnetic Analysis Simulation</h3>
                 <div class="tags"></div>
                 <p>
-                    Designed coils in freecad and tested their magnetic area effects in diffrent environments which fasten our tests.
+                    Designed detector coils in freecad and tested their magnetic area effects in diffrent environments using elmerFemm.
                 </p>
             </div>
             <div class="card" data-tags="software python nokta">
-                <h3>Pygame UI</h3>
+                <h3>Pygame Test UI</h3>
                 <div class="tags"></div>
                 <p>
-                    Designed an pygome ui to test different animations as it would in embeded system pixel by pixel.
+                    Designed an pygome ui to test different animations as it would in embeded system pixel by pixel. Applied rotation animations
+                    and anit alising filters.
                 </p>
             </div>
             <div class="card" data-tags="software qt c++ nokta">
@@ -831,27 +831,29 @@
                 </p>
             </div>
             <div class="card" data-tags="software stm-32 python uart hobby">
-                <h3>Comminucation Protocol for Fast Testing</h3>
+                <h3>Serial IO Library Python</h3>
                 <div class="tags"></div>
                 <p>
-                    Developed a python and stm side of a comminucation protocel where u can easly assign pins for analog and digital data actusion. It aimed to
+                    Developed a python and stm side of a comminucation protocel where u can easily assign pins for analog and digital data actusion. It aimed to
                     help lower-year students. Published on github.
                 </p>
             </div>
             <div class="card" data-tags="software javascript python hobby">
-                <h3>Self Hosted Game</h3>
+                <h3>Self Hosted HeraldeDnD Game</h3>
                 <div class="tags"></div>
                 <p>
-                    Building a game where server creted by user with provided code using Flask. Game is designed as RPG tabletop game where it supports spell creation,
-                    environment generation including ambiance and area effects, creating big maps for world creation adding your own quests etc. Published on github.
+                    This project is been my first javascript project. I am still continueing to develop this game. Project is hosted by one user and other players
+                    can join via with direct ip adress or using another website where I am hosting which connects server adress to a game id and everything happens through
+                    this server. Server side built with Flask, database is some json and csv code for now. There is no javascript library used like React or Next its pure 
+                    javascript. There is many details about this game so please check my github if you are interested in role playing fantsy game.
                 </p>
             </div>
             <div class="card" data-tags="software qt c++ nokta">
                 <h3>Register Analyzer</h3>
                 <div class="tags"></div>
                 <p>
-                    Designed a register analyzer software. Which takes register definations as a designed map and reads logs of device register and compare past settings
-                    changes easily.
+                    Designed a register analyzer software which displays changes of a log file definations bit-by-bit according to datasheet. This helps to analyze old 
+                    and new register settings easily.
                 </p>
             </div>
             <div class="card" data-tags="software python dsp nokta">
@@ -860,15 +862,15 @@
                 <p>
                     Created a library for digital signal processing library which uses numpy, scipy, pandas like packages and matplotlib for visualizing. This library
                     contains freauancy analaysis, many signal operations like apllying filters, resampling signal, filter creation, demodulation, simulate data, reading and 
-                    saving data (csv, excel), fft analaysis, data file management, realtime data processing functions and many plotting functions. 
+                    saving data (csv, excel), fft analaysis, data file management, realtime data processing functions and many plotting functions. Become my first pip project.
                 </p>
             </div>
             <div class="card" data-tags="software arduino c++ uni-3th">
                 <h3>Line Tracking Car</h3>
                 <div class="tags"></div>
                 <p>
-                    Simple line tracking car model suing ldr sensors. When I started this project, I thought to myself, 'Am I really working on a prototype model car, as if 
-                    I haven't been working on a rideable vehicle for the past two years?'.
+                    Built simple line tracking car model suing ldr sensors. When I started this project, I thought to myself, 'Am I really working on a prototype model car, 
+                    as if I haven't been working on a rideable vehicle for the past two years?'.
                 </p>
             </div>
             <div class="card" data-tags="software javascript hobby">
