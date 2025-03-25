@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Portfolio</title>
+    <style>
+        /* Filters styling */
+        .filters {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .filter-tag-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .filter-tag-container[data-active="true"] {
+            background: #2a2d2f;
+            border-color: #2a2d2f;
+            color: white;
+        }
+
+        .filter-tag-container:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .status-box {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+        }
+
+        .filter-tag-container[data-active="true"] .status-box {
+            background: #4CAF50;
+            color: white;
+        }
+
+        /* Cards styling */
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 1rem;
+        }
+
+        .card {
+            border: 1px solid #dee2e6;
+            border-radius: 12px;
+            padding: 1.5rem;
+            background: white;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .tags {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #f8f9fa;
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85em;
+            color: #2a2d2f;
+            border: 1px solid #dee2e6;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        h3 {
+            margin: 0 0 1rem 0;
+            color: #2a2d2f;
+        }
+
+        p {
+            color: #495057;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="filters" id="filters"></div>
+    <div class="cards-container" id="cardsContainer">
+        <div class="card" data-tags="embeded board-design software arduino c++ can-bus altium uni-1st">
+            <h3>Tachometer Card</h3>
+            <div class="tags"></div>
+            <p>Designed my first pcb board with altium for calculating speed of an autonomus car using hal sensors and sending data via Can-Bus</p>
+        </div>
+        <div class="card" data-tags="embeded software arduino c++ can-bus altium uni-1st">
+            <h3>Designed Can-Bus Net</h3>
+            <div class="tags"></div>
+            <p>Designed Can-Bus net in an autonomus car for contrlling system boards (batary management system, tachometer and rf-comminucation unit) in main controlling unit.</p>
+        </div>
+        <div class="card" data-tags="simulation unreal-engine blender blue-script uni-1st">
+            <h3>Designed and Autonomus Car Test Area</h3>
+            <div class="tags"></div>
+            <p>Designed an environment for autonomus car race which contains traffic signs, traffic lights (via bluscript), barriers and cross walks.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+            const filtersContainer = document.getElementById('filters');
+            const allTags = new Set();
+
+            // Collect all unique tags from cards
+            cards.forEach(card => {
+                const tags = card.dataset.tags.split(' ');
+                const tagContainer = card.querySelector('.tags');
+                tags.forEach(tag => {
+                    const span = document.createElement('span');
+                    span.classList.add('tag');
+                    span.textContent = tag;
+                    tagContainer.appendChild(span);
+                    allTags.add(tag);
+                });
+            });
+
+            // Create filter tags
+            Array.from(allTags).sort().forEach(tag => {
+                const filterTagContainer = document.createElement('div');
+                filterTagContainer.classList.add('filter-tag-container');
+                filterTagContainer.dataset.active = "false";
+                filterTagContainer.dataset.tag = tag;
+
+                const statusBox = document.createElement('div');
+                statusBox.classList.add('status-box');
+
+                const tagLabel = document.createElement('span');
+                tagLabel.textContent = tag;
+
+                filterTagContainer.append(tagLabel, statusBox);
+                filterTagContainer.addEventListener('click', () => {
+                    const isActive = filterTagContainer.dataset.active === "true";
+                    filterTagContainer.dataset.active = (!isActive).toString();
+                    filterCards();
+                });
+
+                filtersContainer.appendChild(filterTagContainer);
+            });
+
+            // Filter function
+            function filterCards() {
+                const selectedTags = Array.from(
+                    document.querySelectorAll('.filter-tag-container[data-active="true"]')
+                ).map(container => container.dataset.tag);
+
+                cards.forEach(card => {
+                    const cardTags = card.dataset.tags.split(' ');
+                    const hasAllTags = selectedTags.every(tag => cardTags.includes(tag));
+                    card.style.display = hasAllTags || selectedTags.length === 0 ? 'block' : 'none';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
