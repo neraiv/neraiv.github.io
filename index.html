@@ -168,21 +168,26 @@
         style=" 
             display: flex;  
             flex-wrap: wrap;
+            gap: 1rem
             "
         >
             <!-- Daily Dev Card on the left -->
-            <div style="flex: 1; align-items: center;">
-                <a href="https://app.daily.dev/neraiv"><img src="https://api.daily.dev/devcards/v2/xviJAXE2dxz8A56rmUQIh.png?r=0nj" width="356" alt="Yiğit Şirin's Dev Card"/></a>
+            <div style="flex: 1; display: flex; align-items: center; justify-content: center; width: 100%;">
+                <img src="https://api.daily.dev/devcards/v2/xviJAXE2dxz8A56rmUQIh.png?r=0nj" 
+                     style="width: 95vw; max-width: 356px; height: auto;" 
+                     alt="Yiğit Şirin's Dev Card"/>
             </div>
             
+            
             <!-- GitHub Stats Cards and Badges on the right -->
-            <div style="flex: 2; text-align: right;">
-                <div style="overflow-y: scroll;">
+            <div style="flex: 2; text-align: right; width: 95vw;">
+                <div style="overflow-y: auto; display: flex; flex-direction:column; gap: 1rem">
                     <img
                     src="https://github-readme-stats.vercel.app/api?username=neraiv&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false"
                     height="150"
                     alt="stats graph"
                     />
+
                     <img
                     src="https://github-readme-stats.vercel.app/api/top-langs?username=neraiv&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false"
                     height="150"
