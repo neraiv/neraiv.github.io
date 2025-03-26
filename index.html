@@ -33,7 +33,6 @@
             <a href="#projects">GitHub</a>
             <a href="#work-experience">Work</a>
             <a href="#every-project">Portfolio</a>
-            <a href="#contact">Contact</a>
         </nav>
         
         <i class="bx bx-toggle-left" id="theme-toggle"></i>
@@ -451,7 +450,7 @@
     </section>
                 
     <section class="work-experience" id="work-experience">
-        <h2 class="heading"> Work Experience <span>So Far</span></h2>
+        <h2 class="heading"> Work Experience</h2>
 
         <div class="companies-container">
             <div class="company-container">
@@ -589,12 +588,12 @@
         </div>
         <div class="filters" id="filters"></div>
         <div class="cards-container" id="cardsContainer">
-            <div class="card" data-tags="embeded board-design software arduino c++ can-bus altium uni-1st">
+            <div class="card" data-tags="embeded-board-design embeded-software arduino c++ can-bus altium uni-1st">
                 <h3>Tachometer Card</h3>
                 <div class="tags"></div>
                 <p>Designed my first pcb board with altium for calculating speed of an autonomus car using hal sensors and sending data via Can-Bus</p>
             </div>
-            <div class="card" data-tags="embeded software arduino c++ can-bus altium uni-1st">
+            <div class="card" data-tags="embeded-software arduino c++ can-bus uni-1st">
                 <h3>Designed Can-Bus Net</h3>
                 <div class="tags"></div>
                 <p>Designed Can-Bus net in an autonomus car for contrlling system boards (batary management system, tachometer and rf-comminucation unit) in main controlling unit.</p>
@@ -609,40 +608,56 @@
                 <div class="tags"></div>
                 <p>Designed a simple shooter game where an npc fallows you and detenotes if its got near to player and player tries to escape and shoot it.</p>
             </div>
-            <div class="card" data-tags="embeded board-design stm-32 ki-cad uni-2st">
+            <div class="card" data-tags="embeded-board-design altium uni-1st">
+                <h3>Light Driver Card</h3>
+                <div class="tags"></div>
+                <p>
+                    Designed a simple light driver card which a aims to control front, rear and back ligths of a car from MCU. 
+                    Used relays, voltage converters and simple mcu protection circuits.
+                </p>
+            </div>
+            <div class="card" data-tags="embeded-board-design stm-32 ki-cad uni-2st">
                 <h3>Active Battery Management System Bare</h3>
                 <div class="tags"></div>
-                <p>Designed a BMS using STM32F103 to monitor cell voltage, balance cells, and track battery temperature. It calculates and stores the State of Charge (SoC) in internal EEPROM.</p>
+                <p>
+                    Designed a BMS using STM32F103 to monitor cell voltage, balance cells, track battery temperature and state of
+                    charge parameters to enhance battery life time. Used bi-directional mosfet capacitor topology.
+                </p>
             </div>
             <div class="card" data-tags="software ros open-cv image-processing machine-learning python uni-2st">
                 <h3>Object Detection with TensorFlow</h3>
                 <div class="tags"></div>
-                <p>Implemented object detection using TensorFlow with an Intel RealSense camera in a ROS environment for detecting traffic signs
+                <p>
+                    Implemented object detection using TensorFlow with an Intel RealSense camera in a ROS environment for detecting traffic signs
                     Processed images with OpenCV, trained a model on 60,000 images, and developed an algorithm to determine object count, 
-                    position, and distance. Applied signal processing techniques like Gaussian filtering to refine depth data for path planning integration.
+                    position, and distance. Applied signal processing techniques like Gaussian filtering to refine depth data for 
+                    path planning integration.
                 </p>
             </div>
             <div class="card" data-tags="software ros lidar python uni-2st">
                 <h3>Area Scanning with Infra-Red Lidar </h3>
                 <div class="tags"></div>
-                <p>Developed an area scanning algorithm using an RPLIDAR sensor for obstacle detection and distance measurement. 
-                    Processed 720 filtered data points by dividing them into five segments and created a LaserScan node to 
-                    relay object distances to the path planning module in ROS.
+                <p>
+                    Developed an area scanning algorithm using an RPLIDAR sensor for obstacle detection and distance measurement. 
+                    Processed 720 (0.5 data per degree) filtered data points by dividing them into five segments and created a 
+                    LaserScan node to relay object distances to the path planning module in ROS.
                 </p>
             </div>
-            <div class="card" data-tags="software embeded software c++ arduino control uni-2st">
+            <div class="card" data-tags="embeded-software software c++ arduino control uni-2st">
                 <h3>Autonomus Car Controlling Unit</h3>
                 <div class="tags"></div>
-                <p>Designed a control board that communicates with ROS Bain Node (UART) and other embeded cards (Can-Bus). I had many challenges like comminucation
-                    latency, stability and performance of each unit.
+                <p>
+                    Designed a control board that communicates with ROS Bain Node (UART) and other embeded cards (Can-Bus). 
+                    I had many challenges like comminucation latency, stability and performance of each unit.
                 </p>
             </div>
             <div class="card" data-tags="software ros control c++ python open-cv uni-2st">
                 <h3>Autonomus Car Brain v1</h3>
                 <div class="tags"></div>
                 <p>
-                    Developed a decision-making algorithm using LIDAR to track cones instead of lane detection. Integrated data from object detection and LIDAR nodes, 
-                    filtering it through a large flowchart to generate motor commands. Placed 5th in the competition, but a vision processing error caused a misinterpretation, leading to a collision.
+                    Developed a decision-making algorithm using LIDAR to track cones instead of lane detection. Integrated data from 
+                    object detection and LIDAR nodes, filtering it through a large flowchart to generate motor commands. 
+                    Placed 5th in the competition, but a vision processing error caused a misinterpretation, leading to a collision.
                 </p>
             </div>
             <div class="card" data-tags="software ros gazebo simulation c++ control uni-3th">
@@ -653,15 +668,22 @@
                     While simple in Unreal Engine 4, implementing it in Gazebo was significantly more complex.
                 </p>
             </div>
-            <div class="card" data-tags="software embeded stm-32 c++ uni-3th">
-                <h3>DS18BXX My First GitHub Project</h3>
+            <div class="card" data-tags="embeded-software stm-32 c uni-3th">
+                <h3>DS18BXX</h3>
                 <div class="tags"></div>
                 <p>
-                    Developed OneWire and DS18BXX libraries for STM32, as no existing support was available. 
+                    Developed DS18BXX library for STM32, as no existing support was available. 
                     Created them for use in competitions and by university teams, marking my first contribution to GitHub.
                 </p>
             </div>
-            <div class="card" data-tags="software embeded c++ uni-3th">
+            <div class="card" data-tags="embeded-software stm-32 c uni-3th">
+                <h3>OneWire Library</h3>
+                <div class="tags"></div>
+                <p>
+                    Developed OneWire library for STM32, as no existing support was available. Implemented every one wire method.
+                </p>
+            </div>
+            <div class="card" data-tags="embeded-software c++ uni-3th">
                 <h3>Electronic Compass</h3>
                 <div class="tags"></div>
                 <p>
@@ -669,14 +691,14 @@
                     (discovered later) to reduce noise and implemented a system to validate turning status.
                 </p>
             </div>
-            <div class="card" data-tags="software embeded c++ uni-3th">
+            <div class="card" data-tags="embeded-software c++ uni-3th">
                 <h3>Simple Remote Control with Flysky</h3>
                 <div class="tags"></div>
                 <p>
                     Developed a simple code to read and map values like potentiometer data from a 10-channel remote. Used it to control the vehicle remotely.
                 </p>
             </div>
-            <div class="card" data-tags="software embeded c++ python uni-3th">
+            <div class="card" data-tags="embeded-software c++ python can-bus uart uni-3th">
                 <h3>NVIDIA Xavier as Autopilot Brain</h3>
                 <div class="tags"></div>
                 <p>
@@ -694,10 +716,10 @@
                 </p>
             </div>
             <div class="card" data-tags="software flutter firebase dart uni-4th">
-                <h3>My First Flutter App Flutter joystick</h3>
+                <h3>Flutter Remote Controller</h3>
                 <div class="tags"></div>
                 <p>
-                    Developed a mobile control interface as a side project. Implemented a joystick and used Firebase for real-time vehicle control and track vehicle
+                    Developed a mobile control interface as a side project during my thesis. Implemented a joystick and used Firebase for real-time vehicle control and track vehicle
                     status.
                 </p>
             </div>
@@ -733,7 +755,7 @@
                     PID-based speed, torque, and angle control. Published the library on GitHub.
                 </p>
             </div>
-            <div class="card" data-tags="software esp wifi embeded erkba">
+            <div class="card" data-tags="embeded-software esp wifi firebase erkba">
                 <h3>Software SPI and Ethernet Chip</h3>
                 <div class="tags"></div>
                 <p>
@@ -757,7 +779,7 @@
                     Developed a demo program in MoveIt2 for forward and inverse kinematics analysis tests.
                 </p>
             </div>
-            <div class="card" data-tags="embeded board-design ki-cad arduino erkba">
+            <div class="card" data-tags="embeded-board-design ki-cad arduino erkba">
                 <h3>Hand Controller Circuit</h3>
                 <div class="tags"></div>
                 <p>

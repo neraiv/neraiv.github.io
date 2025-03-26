@@ -951,6 +951,7 @@ span {
   gap: 0.5rem;
   padding: 1rem 1rem;
   border-radius: 20px;
+  font-size: 1.2rem;
   background: #2a2d2f;
   border: 1px solid #dee2e6;
   cursor: pointer;
@@ -1026,7 +1027,7 @@ span {
   background: #f8f9fa;
   padding: 0.35rem 0.75rem;
   border-radius: 20px;
-  font-size: 0.85em;
+  font-size: 1em;
   color: #2a2d2f;
   border: 1px solid #dee2e6;
 }
